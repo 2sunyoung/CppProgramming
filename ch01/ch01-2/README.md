@@ -27,6 +27,5 @@ return 0;
 
 # 실행결과
 
-<img width="546" height="126" alt="image" src="https://github.com/user-attachments/assets/b2b12313-8d48-48c1-9afb-5cd563fece5d" />
-
+<img width="1111" height="209" alt="image" src="https://github.com/user-attachments/assets/8d5373f1-ce3d-4401-ab36-59ee5865c463" />
 
