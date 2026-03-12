@@ -1,0 +1,102 @@
+# 소스코드 설명
+
+```
+#include <iostream>
+```
+
+- cin, cout 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함한다.
+
+```
+#include <cstring>
+```
+
+- 문자열 관련 함수들의 선언을 포함하고 있는 헤더파일 cstring을 포함한다.
+```
+using namespace std;
+```
+
+- std 이름 공간에 선언된 모든 이름에 std::생략
+
+```
+int main(void)
+```
+
+- 메인함수 시작
+
+```
+char text[999];
+```
+
+- 문자형 배열 text 선언
+
+```
+while (true) {
+```
+
+- 무한 반복문
+
+```
+cout << "영문 텍스트를 입력하세요(빈칸 포함 가능)>>";
+```
+
+- 사용자로부터 영문 텍스트를 입력하게 하는 문구 출력
+
+```
+cin.getline(text, sizeof(text), '\n');
+```
+
+- 입력받은 값을 text에 저장 (띄어쓰기 포함 전체 문장)
+
+```
+if (strcmp(text, "exit") == 0) break;
+```
+
+- text 안의 문자열과 exit가 동일하면 while문 종료
+
+```
+int cnt = 0;
+```
+
+- 카운트 변수 cnt 선언 및 초기화
+
+```
+for (int i = 0; text[i] != '\0'; i++) {
+```
+
+- text 안의 요소 하나하나에 접근하기 위한 for문 (인덱스 i가 0부터 시작해서 널문자를 만날 때까지 1씩 증가하며 반복)
+
+```
+if (text[i] != ' ' && (text[i + 1] == ' ')) cnt++;
+```
+
+- 인덱스 i가 공백이 아닌데 바로 다음 요소는 공백일 때 cnt 1씩 증가
+
+```
+if (strcmp(text, "") == 0)
+```
+
+- text에 아무 문자도 저장되어 있지 않다면
+
+```
+cout << "단어의 개수는 " << cnt << "개이다." << endl;
+```
+
+- cnt만 출력 (아무 문자도 없기 때문에 카운트 횟수는 0이다.)
+
+```
+else cout << "단어의 개수는 " << cnt + 1 << "개이다." << endl;
+```
+
+- 그 외의 상황에선 cnt+1 를 출력
+
+```
+return 0;
+```
+
+- 0을 반환하고 메인함수 정상 종료
+
+
+
+# 실행결과
+
+<img width="811" height="361" alt="image" src="https://github.com/user-attachments/assets/0e470fe9-70c5-4e22-8f86-7d05aa4989d7" />
