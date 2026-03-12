@@ -7,16 +7,40 @@
 - cin, cout 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함한다.
 
 ```
+using namespace std;
+```
+
+- std 이름 공간에 선언된 모든 이름에 std::생략
+
+```
 int main(void)
 ```
 
 - 메인함수 시작
 
 ```
-std::cout << "Hello";
+cout << "이름 : 홍길동" << endl;
 ```
 
-- 화면에 hello를 출력한다.
+- "이름 : 홍길동" 출력, 줄바꿈
+
+```
+cout << "주소 : 군산시 대학로 558" << endl;
+```
+
+- "주소 : 군산시 대학로 558" 출력, 줄바꿈
+
+```
+cout << "학번 : 201012" << endl;
+```
+
+- "학번 : 201012" 출력, 줄바꿈
+
+```
+cout << "차종 : 벤츠";
+```
+
+- "차종 : 벤츠" 출력
 
 ```
 return 0;
@@ -27,8 +51,7 @@ return 0;
 
 # 실행결과
 
-<img width="1111" height="209" alt="image" src="https://github.com/user-attachments/assets/8d5373f1-ce3d-4401-ab36-59ee5865c463" />
+<img width="785" height="226" alt="image" src="https://github.com/user-attachments/assets/e1b14cda-50c5-42a8-aa77-273c1f4be389" />
 
-<img width="854" height="881" alt="image" src="https://github.com/user-attachments/assets/533aac92-4d81-428c-b2ad-71d982d12f99" />
 
 
