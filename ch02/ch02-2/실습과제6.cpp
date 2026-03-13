@@ -8,7 +8,7 @@ using namespace std;
 int main(void) {
 	char text[999];
 
-	while (true) {
+		while (true) {
 		cout << "영문 텍스트를 입력하세요(빈칸 포함 가능)>>";
 		cin.getline(text, sizeof(text), '\n');
 
@@ -16,13 +16,11 @@ int main(void) {
 
 		int cnt = 0;
 		for (int i = 0; text[i] != '\0'; i++) {
-			if (text[i] != ' ' && (text[i + 1] == ' '))
+			if ((text[i] != ' ') && (text[i + 1] == ' ' || text[i + 1] == '\0')) {
 				cnt++;
+			}
 		}
-		if (strcmp(text, "") == 0)
-			cout << "단어의 개수는 " << cnt << "개이다." << endl;
-		else
-			cout << "단어의 개수는 " << cnt + 1 << "개이다." << endl;
+		cout << "단어의 개수는 " << cnt << "개이다." << endl;
 	}
 	return 0;
 }
