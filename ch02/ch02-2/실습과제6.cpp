@@ -3,7 +3,6 @@
 # Data : 26.3.12
 
 #include <iostream>
-#include <cstring>
 using namespace std;
 int main(void) {
 	char text[999];
