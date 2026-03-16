@@ -8,12 +8,11 @@ class Rectangle {
 public:
 	int width;
 	int height;
-	int x;
-	int y;
+	int x ,x2;
+	int y, y2;
 	int getArea();
 	int getPerimeter();
-	int getX();
-	int getY();
+	void getXY();
 };
 int Rectangle::getArea() {
 	return width * height;
@@ -21,11 +20,9 @@ int Rectangle::getArea() {
 int Rectangle::getPerimeter() {
 	return 2 * (width + height);
 }
-int Rectangle::getX() {
-	return x + width;
-}
-int Rectangle::getY() {
-	return y - height;
+void Rectangle::getXY() {
+	x2 = x + width;
+	y2 = y - height;
 }
 int main() {
 	Rectangle r;
@@ -33,8 +30,11 @@ int main() {
 	r.y = 2;
 	r.width = 3;
 	r.height = 4;
+
 	cout << "사각형의 면적은 " << r.getArea() << endl;
 	cout << "사각형의 둘레길이는 " << r.getPerimeter() << endl;
-	cout << "사각형의 우측하단의 좌표는 (" << r.getX() << "," << r.getY() << ")";
+
+	r.getXY();
+	cout << "사각형의 우측하단의 좌표는 (" << r.x2 << "," << r.y2 << ")";
 	return 0;
 }
