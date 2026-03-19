@@ -1,22 +1,24 @@
-# Title : 삼각형 면적 계산 프로그램
+# Title : 구의 부피 계산 프로그램
 # Author : Lee sunyoung
-# Data : 26.3.16
+# Data : 26.3.19
 
 #include <iostream>
 using namespace std;
-class Triangle {
+class Sphere {
+	double r;
 public:
-	double s;
-	double h;
-	double getArea();
+	Sphere();
+	Sphere(double a);
+	double getVolume() { return (4.0/3.0) * 3.14 * r * r * r; }
 };
-double Triangle::getArea() {
-	return s * h * 0.5;
-}
+
+Sphere::Sphere() : Sphere(1) {}
+Sphere::Sphere(double a) : r(a) {}
+
 int main() {
-	Triangle t;
-	t.s = 3.0;
-	t.h = 5.0;
-	cout << "삼각형의 면적은 " << t.getArea();
+	Sphere sph1; 
+	cout << "구의 부피는 " << sph1.getVolume() << endl;
+	Sphere sph2(3);
+	cout << "구의 부피는 " << sph2.getVolume() << endl;
 	return 0;
 }
