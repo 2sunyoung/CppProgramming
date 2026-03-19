@@ -28,7 +28,7 @@ public:
 ```cpp
 	int x2, y2;
 ```
-- 우측상단 좌표를 저장할 정수형 멤버 변수 x, y 선언
+- 우측하단 좌표를 저장할 정수형 멤버 변수 x, y 선언
 
 ```cpp
 	int width, height;
@@ -78,7 +78,7 @@ Rectangle::Rectangle() : Rectangle(1, 1, 1, 1) {}
 ```cpp
 Rectangle::Rectangle(int a, int b) : Rectangle(a, b, 1, 1) {}
 ```
-- Rectangle()이 타겟 생성자에게 초기화를 위임하여 x=인자값, y=인자값, width=1, height=1로 설정
+- Rectangle(int a, int b)가 타겟 생성자에게 초기화를 위임하여 x=인자값, y=인자값, width=1, height=1로 설정
 
 ```cpp
 Rectangle::Rectangle(int a, int b, int w, int h) : x(a), y(b), width(w), height(h) {}
