@@ -1,0 +1,97 @@
+# 소스코드 설명
+
+```cpp
+#include <iostream>
+```
+- 
+
+```cpp
+using namespace std;
+```
+- 
+
+```cpp
+class Triangle {
+```
+- 
+
+```cpp
+	int s, h;
+```
+- 
+
+```cpp
+public:
+```
+- 
+
+```cpp
+	Triangle();
+```
+- 
+
+```cpp
+	Triangle(int a, int b);
+```
+- 
+
+```cpp
+	double getArea() { return s * h * 0.5; }
+```
+- 
+
+```cpp
+};
+```
+- 
+
+```cpp
+Triangle::Triangle() : Triangle(1, 1) {}
+```
+- 
+
+```cpp
+Triangle::Triangle(int a, int b) : s(a), h(b) {}
+```
+- 
+
+
+
+```cpp
+int main() {
+```
+- 
+
+```cpp
+	Triangle tri1;
+```
+- 
+
+```cpp
+	cout << "삼각형의 면적은 " << tri1.getArea() << endl;
+```
+- 
+
+```cpp
+	Triangle tri2(2, 4);
+```
+- 
+
+```cpp
+	cout << "삼각형의 면적은 " << tri2.getArea();
+```
+- 
+
+```cpp
+	return 0;
+```
+- 
+
+```cpp
+}
+```
+- 
+
+
+# 실행결과
+<img src="이미지_주소를_넣으세요" />
