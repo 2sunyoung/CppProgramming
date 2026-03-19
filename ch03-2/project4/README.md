@@ -178,4 +178,20 @@ int main() {
 - 
 
 ```cpp
-	cout << "rect3의 우측하단의 좌표는 (" << rect3.x2 << "," << r
+	cout << "rect3의 우측하단의 좌표는 (" << rect3.x2 << "," << rect3.y2 << ")" << endl;
+```
+- 
+
+```cpp
+	return 0;
+```
+- 
+
+```cpp
+}
+```
+- 
+
+
+# 실행결과
+<img width="796" height="230" alt="image" src="https://github.com/user-attachments/assets/29d68c96-9fa9-483a-bc73-5ee7b2ad3bb9" />
