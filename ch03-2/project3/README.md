@@ -1,7 +1,6 @@
 # 소스코드 설명
 
-```
-cpp
+```cpp
 #include <iostream>
 ```
 - 
