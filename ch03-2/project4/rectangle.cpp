@@ -21,7 +21,9 @@ public:
 };
 Rectangle::Rectangle() : Rectangle(1, 1, 1, 1) {}
 Rectangle::Rectangle(int a, int b) : Rectangle(a, b, 1, 1) {}
-Rectangle::Rectangle(int a, int b, int w, int h) : x(a), y(b), width(w), height(h) {}
+Rectangle::Rectangle(int a, int b, int w, int h) : x(a), y(b), width(w), height(h) {
+	rect3.getXY();
+}
 
 void Rectangle::getXY() {
 	x2 = x + width;
@@ -39,8 +41,6 @@ int main() {
 	
 	cout << "rect1의 면적은 " << rect1.getArea() << endl;
 	cout << "rect2의 둘레길이는 " << rect2.getPerimeter() << endl;
-
-	rect3.getXY();
 	cout << "rect3의 우측하단의 좌표는 (" << rect3.x2 << "," << rect3.y2 << ")" << endl;
 	return 0;
 }
