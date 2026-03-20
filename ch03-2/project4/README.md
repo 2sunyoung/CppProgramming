@@ -81,9 +81,9 @@ Rectangle::Rectangle(int a, int b) : Rectangle(a, b, 1, 1) {}
 - Rectangle(int a, int b)가 타겟 생성자에게 초기화를 위임하여 x=인자값, y=인자값, width=1, height=1로 설정
 
 ```cpp
-Rectangle::Rectangle(int a, int b, int w, int h) : x(a), y(b), width(w), height(h) {}
+Rectangle::Rectangle(int a, int b, int w, int h) : x(a), y(b), width(w), height(h) { getXY();}
 ```
-- 타겟 생성자 정의(멤버 초기화 리스트를 통해 멤버 변수 x, y, width, height를 인자값으로 초기화)
+- 타겟 생성자 정의(멤버 초기화 리스트를 통해 멤버 변수 x, y, width, height를 인자값으로 초기화 ,  getXY 함수를 호출하여 x2, y2값 대입)
 
 ```cpp
 void Rectangle::getXY() {
@@ -144,11 +144,6 @@ int main() {
 	cout << "rect2의 둘레길이는 " << rect2.getPerimeter() << endl;
 ```
 - getPerimeter 함수 호출, 결과 출력
-
-```cpp
-	rect3.getXY();
-```
-- getXY 함수 호출
 
 ```cpp
 	cout << "rect3의 우측하단의 좌표는 (" << rect3.x2 << "," << rect3.y2 << ")" << endl;
