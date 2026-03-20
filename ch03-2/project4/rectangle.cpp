@@ -21,9 +21,7 @@ public:
 };
 Rectangle::Rectangle() : Rectangle(1, 1, 1, 1) {}
 Rectangle::Rectangle(int a, int b) : Rectangle(a, b, 1, 1) {}
-Rectangle::Rectangle(int a, int b, int w, int h) : x(a), y(b), width(w), height(h) {
-	getXY();
-}
+Rectangle::Rectangle(int a, int b, int w, int h) : x(a), y(b), width(w), height(h) { getXY(); }
 
 void Rectangle::getXY() {
 	x2 = x + width;
