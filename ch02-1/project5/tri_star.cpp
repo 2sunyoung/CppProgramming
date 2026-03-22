@@ -1,6 +1,6 @@
-# Title : *을 직각삼각형 형태로 출력하는 프로그램
-# Author : Lee sunyoung
-# Data : 26.3.12
+// Title : *을 직각삼각형 형태로 출력하는 프로그램
+// Author : Lee sunyoung
+// Data : 26.3.12
 
 #include <iostream>
 using namespace std;
