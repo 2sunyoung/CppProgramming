@@ -1,6 +1,6 @@
-# Title : 축하 메시지 출력 프로그램
-# Author : Lee sunyoung
-# Data : 26.3.12
+// Title : 축하 메시지 출력 프로그램
+// Author : Lee sunyoung
+// Data : 26.3.12
 
 #include <iostream>
 using namespace std;
