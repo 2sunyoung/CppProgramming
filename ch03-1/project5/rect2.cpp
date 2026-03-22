@@ -1,6 +1,6 @@
-# Title : 사각형 정보 계산 프로그램
-# Author : Lee sunyoung
-# Data : 26.3.16
+// Title : 사각형 정보 계산 프로그램
+// Author : Lee sunyoung
+// Data : 26.3.16
 
 #include <iostream>
 using namespace std;
