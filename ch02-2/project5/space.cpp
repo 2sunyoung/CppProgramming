@@ -1,6 +1,6 @@
-# Title : 문자열을 알파벳단위로 분리하는 프로그램
-# Author : Lee sunyoung
-# Data : 26.3.12
+// Title : 문자열을 알파벳단위로 분리하는 프로그램
+// Author : Lee sunyoung
+// Data : 26.3.12
 
 #include <iostream>
 using namespace std;
