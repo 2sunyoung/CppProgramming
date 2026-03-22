@@ -1,6 +1,6 @@
-# Title : 사각형 정보 출력 프로그램
-# Author : Lee sunyoung
-# Data : 26.3.19
+// Title : 사각형 정보 출력 프로그램
+// Author : Lee sunyoung
+// Data : 26.3.19
 
 #include <iostream>
 using namespace std;
