@@ -1,6 +1,6 @@
-# Title : 구의 부피 계산 프로그램
-# Author : Lee sunyoung
-# Data : 26.3.19
+// Title : 구의 부피 계산 프로그램
+// Author : Lee sunyoung
+// Data : 26.3.19
 
 #include <iostream>
 using namespace std;
