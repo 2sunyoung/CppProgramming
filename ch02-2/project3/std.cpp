@@ -1,6 +1,6 @@
-# Title : 입력받은 개인정보를 출력하는 프로그램
-# Author : Lee sunyoung
-# Data : 26.3.12
+// Title : 입력받은 개인정보를 출력하는 프로그램
+// Author : Lee sunyoung
+// Data : 26.3.12
 
 #include <iostream>
 using namespace std;
