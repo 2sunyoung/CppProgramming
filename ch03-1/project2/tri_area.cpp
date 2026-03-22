@@ -1,6 +1,6 @@
-# Title : 삼각형 면적 계산 프로그램
-# Author : Lee sunyoung
-# Data : 26.3.16
+// Title : 삼각형 면적 계산 프로그램
+// Author : Lee sunyoung
+// Data : 26.3.16
 
 #include <iostream>
 using namespace std;
