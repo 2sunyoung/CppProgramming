@@ -1,6 +1,6 @@
-# Title : 구의 부피와 표면적 계산 프로그램
-# Author : Lee sunyoung
-# Data : 26.3.16
+// Title : 구의 부피와 표면적 계산 프로그램
+// Author : Lee sunyoung
+// Data : 26.3.16
 
 #include <iostream>
 using namespace std;
