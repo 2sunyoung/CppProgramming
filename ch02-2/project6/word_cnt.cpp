@@ -1,6 +1,6 @@
-# Title : 단어의 개수를 세는 프로그램
-# Author : Lee sunyoung
-# Data : 26.3.12
+// Title : 단어의 개수를 세는 프로그램
+// Author : Lee sunyoung
+// Data : 26.3.12
 
 #include <iostream>
 #include <cstring>
