@@ -1,6 +1,6 @@
-# Title : 이차식 연산 프로그램
-# Author : Lee sunyoung
-# Data : 26.3.12
+// Title : 이차식 연산 프로그램
+// Author : Lee sunyoung
+// Data : 26.3.12
 
 #include <iostream>
 using namespace std;
