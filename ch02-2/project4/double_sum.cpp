@@ -1,6 +1,6 @@
-# Title : 입력받은 실수들의 합을 출력하는 프로그램
-# Author : Lee sunyoung
-# Data : 26.3.12
+// Title : 입력받은 실수들의 합을 출력하는 프로그램
+// Author : Lee sunyoung
+// Data : 26.3.12
 
 #include <iostream>
 using namespace std;
