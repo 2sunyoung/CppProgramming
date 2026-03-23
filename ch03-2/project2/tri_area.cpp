@@ -9,10 +9,14 @@ class Triangle {
 public:
 	Triangle();
 	Triangle(double a, double b);
-	double getArea() { return s * h * 0.5; }
+	double getArea();
 };
 Triangle::Triangle() : Triangle(1, 1) {}
 Triangle::Triangle(double a, double b) : s(a), h(b) {}
+
+double Triangle::getArea() {
+	return s * h * 0.5;
+}
 
 int main() {
 	Triangle tri1;
