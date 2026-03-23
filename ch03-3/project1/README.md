@@ -11,7 +11,7 @@
 지역변수(지역객체), 전역변수(전역객체)의 차이를 조사하라, 선언위치, 접근범위, 생성시점, 소멸시점, 초기화 여부 등의 관점에서 비교하라.
 
 ## 답
-<img width="1310" height="1065" alt="image" src="https://github.com/user-attachments/assets/6bfd5863-4640-4681-9239-f2df1625a657" /><br>
+<img width="1000" height="765" alt="image" src="https://github.com/user-attachments/assets/6bfd5863-4640-4681-9239-f2df1625a657" /><br>
 
 
 ## 문제3
