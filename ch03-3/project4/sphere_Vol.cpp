@@ -24,9 +24,9 @@ double Sphere::getVolume() {
 }
 int main() {
 	Sphere sph1; 
-	cout << "구의 부피는" << sph1.getVolume() << endl;
+	cout << "구의 부피는 " << sph1.getVolume() << endl;
 	Sphere sph2(3);
-	cout << "구의 부피는" << sph2.getVolume() << endl;
+	cout << "구의 부피는 " << sph2.getVolume() << endl;
 
 	return 0;
 }
