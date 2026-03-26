@@ -1,4 +1,4 @@
-// Title : 삼각형 정보 출력 프로그램 
+// Title : 삼각형 정보 출력 프로그램 (+오류 처리)
 // Author : Lee sunyoung
 // Data : 26.3.25
 
@@ -11,30 +11,26 @@ public:
 	Triangle();
 	Triangle(double w, double h);
 	~Triangle();
-	double getArea();
 	void setWidth(double w);
 	double getWidth();
 	void setHeight(double h);
 	double getHeight();
 };
 
-Triangle::Triangle() {
-	width = 1;
-	height = 1;
-	cout << "폭" << width << " 높이" << height << " 삼각형 생성" << endl;
-}
-Triangle::Triangle(double w, double h) {
-
+Triangle::Triangle() : Triangle(1, 1) {}
+Triangle::Triangle(double w, double h): width(w), height(h){
+	if (w <= 0 || h <= 0) {
+		width = 1;
+		height = 1;
+		cout << "길이는 양수여야함, 대신에 폭" << width << ", 높이" << height << " 삼각형 생성" << endl;
+	}
 }
 Triangle::~Triangle() {
-	cout << "폭" << width << " 높이" << height << " 삼각형 소멸" << endl;
-}
-double Triangle::getArea() {
-	return width * height * 0.5;
+	cout << "폭" << width << ", 높이" << height << " 삼각형 소멸" << endl;
 }
 void Triangle::setWidth(double w) {
 	if (w <= 0)
-		cout << "폭은 양수이어야 함!!" << endl;
+		cout << "폭은 양수이어야 함" << endl;
 	else width = w;
 }
 double Triangle::getWidth() {
@@ -42,7 +38,7 @@ double Triangle::getWidth() {
 }
 void Triangle::setHeight(double h) {
 	if (h <= 0)
-		cout << "높이는 양수이어야 함!!" << endl;
+		cout << "높이는 양수이어야 함" << endl;
 	else height = h;
 }
 double Triangle::getHeight() {
@@ -55,6 +51,6 @@ int main() {
 	tri.setWidth(3);
 	tri.setHeight(5);
 	cout << "삼각형의 폭은 " << tri.getWidth() << endl;
-		cout << "삼각형의 높이는 " << tri.getHeight() << endl;
-		return 0;
+	cout << "삼각형의 높이는 " << tri.getHeight() << endl;
+	return 0;
 }
