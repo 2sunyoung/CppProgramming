@@ -25,4 +25,5 @@ int main() {
 	Circle waffle;
 	waffle.setRadius(5);
 	cout << "원의 반지름은 " << waffle.getRadius() << endl;
+	return 0;
 }
