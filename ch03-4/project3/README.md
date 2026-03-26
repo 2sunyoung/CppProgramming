@@ -152,8 +152,8 @@ void Triangle::setHeight(double h) {
 
 ```cpp
 	else height = h;
-``` 그밖의 경우에 height에 h값 대입
-- 
+``` 
+- 그밖의 경우에 height에 h값 대입
 
 ```cpp
 double Triangle::getHeight() {
