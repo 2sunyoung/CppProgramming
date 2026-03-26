@@ -100,6 +100,11 @@ int main() {
 ```
 - 멤버 접근 함수 getRadius를 호출하여 읽어낸 반지름 값을 출력함 
 
+```cpp
+	return 0;
+```
+- 0을 반환하고 메인함수 정상 종료
+
 
 # 실행결과
 <img width="578" height="157" alt="image" src="https://github.com/user-attachments/assets/8ad73b77-3cd7-4670-88b3-8913249b15a1" />
