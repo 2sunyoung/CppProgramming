@@ -18,12 +18,14 @@ public:
 };
 
 Triangle::Triangle() : Triangle(1, 1) {}
-Triangle::Triangle(double w, double h): width(w), height(h){
+Triangle::Triangle(double w, double h) {
+	width = (w <= 0) ? 1 : w;
+	height = (h <= 0) ? 1 : h;
+	
 	if (w <= 0 || h <= 0) {
-		width = 1;
-		height = 1;
 		cout << "길이는 양수여야함, 대신에 폭" << width << ", 높이" << height << " 삼각형 생성" << endl;
 	}
+	else cout << "폭" << width << ", 높이" << height << " 삼각형 생성" << endl;
 }
 Triangle::~Triangle() {
 	cout << "폭" << width << ", 높이" << height << " 삼각형 소멸" << endl;
