@@ -387,132 +387,117 @@ public:
 ```cpp
 Pipe::Pipe(): index(0) {
 ```
-- 
+- 매개 변수가 없는 생성자 정의 (멤버 초기화 리스트를 통해 index = 0으로 초기화)
 
 ```cpp
 	for (int i = 0; i < 10; i++) {
 ```
-- 
+- data 배열의 요소를 모두 0으로 초기화하기 위한 for문 (i가 0부터 10까지 1씩 증가하며 반복)
 
 ```cpp
 		data[i] = 0;
 ```
-- 
-
-```cpp
-}
-```
-- 
+- data의 i번째 요소에 0을 대입
 
 ```cpp
 int Pipe::arrive(int n) {
 ```
-- 
+- arrive 함수 정의
 
 ```cpp
 	if (index == 10) {
 ```
-- 
+- index가 10이라면 (파이프가 꽉 찼다면)
 
 ```cpp
-		int frontNum = data[0];
+		int frontNum = shift();
 ```
-- 
-
-```cpp
-		for (int i = 1; i < 10; i++) {
-```
-- 
-
-```cpp
-			data[i - 1] = data[i];
-```
--  
+- 맨 앞의 수를 담을 정수형 변수 frontNum 선언 & shift() 함수 호출 (파이프 내 정수를 왼쪽으로 미는 코드가 중복되어 shift 함수를 호출)
 
 ```cpp
 		data[9] = n;
 ```
-- 
+- 마지막 요소에 n 대입
 
 ```cpp
 		return frontNum;
 ```
-- 
+- data[0]을 리턴함
 
 ```cpp
 	else {
 ```
-- 
+- 그밖의 경우에 (파이프가 꽉 차지 않은 경우)
 
 ```cpp
 		data[index] = n;
 ```
-- 
+- index 자리에 해당하는 요소에 n 대입 
 
 ```cpp
 		index++;
 ```
-- 
+- index 1 증가 (다음 칸에 수를 넣어줘야 하니까) 
 
 ```cpp
 		return -1;
 ```
-- 
+- -1을 리턴함
 
 ```cpp
 int Pipe::shift() {
 ```
-- 
+- shift 함수 정의
 
 ```cpp
 	int frontNum = data[0];
 ```
-- 
+- 맨 앞의 수를 담을 정수형 변수 frontNum 선언 및 data의 첫번째 요소로 초기화
 
 ```cpp
 	for (int i = 1; i < 10; i++) {
 ```
-- 
+- 정수를 왼쪽으로 한칸씩 밀어버릴 용도의 for문 (i가 1부터 10까지 1씩 증가하며 반복)
 
 ```cpp
 		data[i - 1] = data[i];
 ```
--  
+-  i-1번째 요소에 i번째 요소를 대입 (한칸씩 밀어준 것) 
 
 ```cpp
 	data[9] = 0;
 ```
-- 
+- 마지막 요소에 0 대입
 
 ```cpp
 	return frontNum;
 ```
--  
+- data[0]을 리턴함
 
 ```cpp
 void Pipe::show() {
 ```
-- 
+- show 함수 선언
 
 ```cpp
 	cout << "파이프 내부 [";
 ```
-- 
+- 파이프 내부 메시지 출력
 
 ```cpp
 	for (int i = 0; i < 10; i++) {
 ```
-- 
+- 파이프 내부의 정수들을 모두 출력하기 위한 for문 (i가 0부터 10까지 1씩 증가하며 반복) 
 
 ```cpp
 		cout << data[i] << " ";
 ```
-- 
+- 배열의 요소들을 띄어쓰기로 구분하며 출력
 
 ```cpp
 	cout << "]" << endl;
 ```
-- 
+- 괄호 닫는 메시지 출력 후 줄바꿈
 
 ```cpp
 int main() {
@@ -527,54 +512,52 @@ int main() {
 ```cpp
 	for (int i = 0; i < 6; i++) pipe.arrive(i);
 ```
-- 
+- 0~5까지 파이프에 숫자 삽입
 
 ```cpp
 	pipe.show();
 ```
-- 
+- 현재 파이프 내부 숫자들 출력
 
 ```cpp
 	for (int i = 6; i < 12; i++) pipe.arrive(i);
 ```
-- 
+- 6~12까지 파이프에 숫자 삽입
 
 ```cpp
 	pipe.show();
 ```
-- 
+- 현재 파이프 내부 숫자들 출력
 
 ```cpp
 	int front = pipe.shift();
 ```
-- 
+- 정수형 변수 front를 선언하고, shift 함수를 호출하여 맨 앞 데이터를 뽑아 넣음
 
 ```cpp
 	cout << "shift()로 제거된 맨 앞 데이터 : " << front << endl;
 ```
-- 
+- shift()로 제거된 맨 앞 데이터 출력
 
 ```cpp
 	pipe.show();
 ```
-- 
+- 현재 파이프 내부 숫자들 출력
 
 ```cpp
 	front = pipe.arrive(50);
 ```
-- 
-
-
+- arrive 함수를 호출하고 파이프의 맨 뒤에 50 삽입함, 밀려서 제거된 맨 앞 데이터가 있다면 front에 그 데이터가 저장되고, 파이프가 꽉 차 있지 않아 제거된 맨 앞 데이터가 없다면 front에 -1이 저장됨
 
 ```cpp
 	cout << "arrive(50)로 제거된 맨 앞 데이터 : " << front << endl;
 ```
-- 
+- arrive(50)로 제거된 맨 앞 데이터 출력
 
 ```cpp
 	pipe.show();
 ```
-- 
+- 현재 파이프 내부 숫자들 출력
 
 ```cpp
 	return 0;
