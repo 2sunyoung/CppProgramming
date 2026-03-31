@@ -9,10 +9,10 @@ private:
 	int width, height;
 public:
 	Triangle() : width(1), height(1) {
-		cout << "폭" << width << ", 높이" << height << "인 삼각형 생성" << endl;
+		cout << "폭" << width << ",높이" << height << "인 삼각형 생성" << endl;
 	}
 	~Triangle() {
-		cout << "폭" << width << ", 높이" << height << "인 삼각형 소멸" << endl;
+		cout << "폭" << width << ",높이" << height << "인 삼각형 소멸" << endl;
 	}
 	void setWidth(int w) {
 		if (w <= 0)
