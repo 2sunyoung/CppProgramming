@@ -21,10 +21,7 @@ Pipe::Pipe(): index(0) {
 }
 int Pipe::arrive(int n) {
 	if (index == 10) {
-		int frontNum = data[0];
-		for (int i = 1; i < 10; i++) {
-			data[i - 1] = data[i];
-		}
+		int frontNum = shift();
 		data[9] = n;
 		return frontNum;
 	}
