@@ -325,3 +325,262 @@ int main() {
 
 # 실행결과
 <img width="571" height="172" alt="image" src="https://github.com/user-attachments/assets/35ba0457-fdc5-4a61-9a16-dc0199ed3be9" />
+
+
+# 문제 10 소스코드 설명
+
+```cpp
+#include <iostream>
+```
+- cin, cout 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함한다.
+
+```cpp
+using namespace std;
+```
+- std 이름 공간에 선언된 모든 이름에 std::생략
+
+```cpp
+class Pipe {
+```
+- Pipe 클래스 선언부
+
+```cpp
+private:
+```
+- 멤버 변수에 대한 접근 지정자를 private으로 함 (외부 접근 불가)
+
+```cpp
+	int data[10];
+```
+- 파이프 내 숫자를 저장할 정수형 배열 data 선언
+
+```cpp
+	int index;
+```
+- 도착하는 정수를 저장할 위치를 나타내는 data 배열의 인덱스 변수 선언
+
+```cpp
+public:
+```
+- 멤버 함수에 대한 접근 지정자를 public으로 함 (외부 접근 가능)
+
+```cpp
+	Pipe();
+```
+- 매개 변수가 없는 생성자 선언
+
+```cpp
+	int arrive(int n);
+```
+- 파이프 맨 뒤에 n을 삽입, 꽉 차 있으면 정수들을 앞으로 밀고 제거된 맨 앞의 수를 리턴, 꽉 차 있지 않으면 -1을 리턴하는 함수 arrive 선언 
+
+```cpp
+	int shift();
+```
+- 파이프 내 정수들을 앞으로 밀고, 제거된 맨 앞의 수를 리턴, 마지막 요소에는 0을 대입해주는 함수 shift 선언
+
+```cpp
+	void show();
+```
+- 파이프 내 정수들을 모두 출력하는 함수 show 선언
+
+```cpp
+Pipe::Pipe(): index(0) {
+```
+- 
+
+```cpp
+	for (int i = 0; i < 10; i++) {
+```
+- 
+
+```cpp
+		data[i] = 0;
+```
+- 
+
+```cpp
+}
+```
+- 
+
+```cpp
+int Pipe::arrive(int n) {
+```
+- 
+
+```cpp
+	if (index == 10) {
+```
+- 
+
+```cpp
+		int frontNum = data[0];
+```
+- 
+
+```cpp
+		for (int i = 1; i < 10; i++) {
+```
+- 
+
+```cpp
+			data[i - 1] = data[i];
+```
+-  
+
+```cpp
+		data[9] = n;
+```
+- 
+
+```cpp
+		return frontNum;
+```
+- 
+
+```cpp
+	else {
+```
+- 
+
+```cpp
+		data[index] = n;
+```
+- 
+
+```cpp
+		index++;
+```
+- 
+
+```cpp
+		return -1;
+```
+- 
+
+```cpp
+int Pipe::shift() {
+```
+- 
+
+```cpp
+	int frontNum = data[0];
+```
+- 
+
+```cpp
+	for (int i = 1; i < 10; i++) {
+```
+- 
+
+```cpp
+		data[i - 1] = data[i];
+```
+-  
+
+```cpp
+	data[9] = 0;
+```
+- 
+
+```cpp
+	return frontNum;
+```
+-  
+
+```cpp
+void Pipe::show() {
+```
+- 
+
+```cpp
+	cout << "파이프 내부 [";
+```
+- 
+
+```cpp
+	for (int i = 0; i < 10; i++) {
+```
+- 
+
+```cpp
+		cout << data[i] << " ";
+```
+- 
+
+```cpp
+	cout << "]" << endl;
+```
+- 
+
+```cpp
+int main() {
+```
+- 메인함수 시작
+
+```cpp
+	Pipe pipe;
+```
+- Pipe 클래스형 변수(객체) pipe 생성, 인자값이 없기 때문에 Pipe()이 실행됨 (index = 0, data[10] = {0})
+
+```cpp
+	for (int i = 0; i < 6; i++) pipe.arrive(i);
+```
+- 
+
+```cpp
+	pipe.show();
+```
+- 
+
+```cpp
+	for (int i = 6; i < 12; i++) pipe.arrive(i);
+```
+- 
+
+```cpp
+	pipe.show();
+```
+- 
+
+```cpp
+	int front = pipe.shift();
+```
+- 
+
+```cpp
+	cout << "shift()로 제거된 맨 앞 데이터 : " << front << endl;
+```
+- 
+
+```cpp
+	pipe.show();
+```
+- 
+
+```cpp
+	front = pipe.arrive(50);
+```
+- 
+
+
+
+```cpp
+	cout << "arrive(50)로 제거된 맨 앞 데이터 : " << front << endl;
+```
+- 
+
+```cpp
+	pipe.show();
+```
+- 
+
+```cpp
+	return 0;
+```
+- 0을 반환하고 메인함수 정상 종료
+
+
+# 실행결과
+<img width="581" height="245" alt="image" src="https://github.com/user-attachments/assets/ddf1848e-66ee-4919-a5b0-1e7cb5b93c1c" />
