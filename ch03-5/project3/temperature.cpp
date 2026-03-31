@@ -9,14 +9,11 @@ private:
 	double tem[10] = { 0 };
 	int idx;
 public:
-	Storage();
+	Storage() :idx(0) {};
 	void put(double t);
 	void dump();
 	double getAvg();
 };
-Storage::Storage() {
-	idx = 0;
-}
 void Storage::put(double t) {
 	if (idx == 10) {
 		cout << "체온 값은 최대 10개까지만 저장이 가능합니다..." << endl;
