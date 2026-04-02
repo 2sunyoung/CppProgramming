@@ -73,7 +73,7 @@ public:
 ```cpp
 	void setHeight(int h) {
 ```
-- 멤버 변수의 값을 설정하는 멤버 접근 함수 setWidth 정의
+- 멤버 변수의 값을 설정하는 멤버 접근 함수 setHeight 정의
 
 ```cpp
 		if (h <= 0)
