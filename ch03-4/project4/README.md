@@ -48,7 +48,7 @@ public:
 ```cpp
 	void setWidth(double w);
 ```
-- 멤버 변수의 값을 설정하는 멤버 접근 함수 setWidth 선
+- 멤버 변수의 값을 설정하는 멤버 접근 함수 setWidth 선언
 
 ```cpp
 	double getWidth();
