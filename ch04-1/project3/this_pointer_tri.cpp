@@ -31,9 +31,9 @@ double Triangle::getArea() {
 int main() {
 	Triangle tri1; 
 	cout << "삼각형의 면적은 " << tri1.getArea() << endl;
-		Triangle tri2(10);
+	Triangle tri2(10);
 	cout << "삼각형의 면적은 " << tri2.getArea() << endl;
-		Triangle tri3(10, 2); 
+	Triangle tri3(10, 2); 
 	cout << "삼각형의 면적은 " << tri3.getArea() << endl;
-		return 0;
+	return 0;
 }
