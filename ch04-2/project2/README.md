@@ -6,7 +6,7 @@
 ## 답 
 <b>NULL의 의미 :</b> 포인터가 어떤 객체도 가리키지 않음을 나타내는 매크로 상수 <br>
 <b>C/C++언어에서 정의의 차이 : C</b>에서는 (void*)0으로 정의되고 / <b>C++</b>에서는 0으로 정의됨 <br>
-<b>정의된 헤더파일 : C</b>에서는 <stdio.h>, <stdlib.h>, <stddef.h> 등 / <b>C++</b>에서는 ㄹ<cstddef>, <cstdio>, <cstdlib> 등<br>
+<b>정의된 헤더파일 : C</b>에서는 <stdio.h>, <stdlib.h>, <stddef.h> 등 / <b>C++</b>에서는 <cstddef>, <cstdio>, <cstdlib> 등<br>
 <b>사용 용도 :</b> 주로 포인터 초기화, 메모리 할당 실패 검사 등 <br>
 
 ## 문제2
