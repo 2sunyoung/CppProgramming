@@ -6,7 +6,6 @@
 using namespace std;
 int main() {
 	int n;
-	double sum = 0;
 
 	cout << "입력할 실수의 개수를 입력하세요: ";
 	cin >> n;
