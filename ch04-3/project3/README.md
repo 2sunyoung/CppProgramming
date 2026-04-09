@@ -1,5 +1,5 @@
 # 아래 코드의 문제점과 해결 방법 설명
-<img width="1002" height="382" alt="image" src="https://github.com/user-attachments/assets/d5f4a606-7cb7-4a20-8c41-84009745f8be" /> <br>
+<img width="645" height="265" alt="image" src="https://github.com/user-attachments/assets/d5f4a606-7cb7-4a20-8c41-84009745f8be" /> <br>
 이 코드는 포인터를 증가시켜 원래 동적 배열의 시작 주소를 잃어버려 잘못된 메모리 해제가 발생하는 문제가 있다.<br>
 이러한 문제점은 인덱스로 접근하거나 별도의 포인터를 사용하여 해결하면 된다.
 
