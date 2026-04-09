@@ -1,5 +1,5 @@
 # 아래 코드의 문제점과 해결 방법 설명
-<img width="864" height="357" alt="image" src="https://github.com/user-attachments/assets/49420b9b-e234-4083-afc5-9b74d7388428" /> <br>
+<img width="645" height="265" alt="image" src="https://github.com/user-attachments/assets/78aade8f-08c3-424d-b329-d0d5490051ab" /><br>
 이 코드는 무한 반복문이 돌아갈 때마다 새로운 메모리가 할당되고, 이전 반복에서 생성된 p는 다음 반복의 동적 할당 메모리의 주소값으로 덮어씌워지는 구조이다. <br>
 즉, 이전에 할당받은 메모리 주소를 잃어버리게 되어 해제할 방법이 없어지고, 그로 인해 메모리 누수가 생기게 된다. <br>
 이러한 문제점은 객체의 사용이 끝난 직후에 메모리를 즉시 반납하면 해결할 수 있다.
