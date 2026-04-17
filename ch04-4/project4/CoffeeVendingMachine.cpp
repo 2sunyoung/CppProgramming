@@ -3,7 +3,6 @@
 // Data : 26.4.16
 
 #include <iostream>
-#include <string>
 using namespace std;
 class Container {
 	int size;
