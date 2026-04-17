@@ -873,3 +873,195 @@ int main() {
 
 # 실행결과
 <img width="788" height="331" alt="image" src="https://github.com/user-attachments/assets/ee7b5cc5-e9e8-4052-bd6d-9ab6d628073d" />
+
+
+# 문제 13 소스코드 설명
+
+```cpp
+#include <iostream>
+```
+- cin, cout 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 iostream을 포함한다.
+
+```cpp
+#include <string>
+```
+- string 클래스를 사용하기 위한 헤더 파일 string 포함
+
+```cpp
+using namespace std;
+```
+- std 이름 공간에 선언된 모든 이름에 std::생략
+
+```cpp
+class Histogram {
+```
+- Histogram 클래스 선언부
+
+```cpp
+	string str;
+```
+- 문자열을 저장할 string 객체 str 선언
+
+```cpp
+	int cnt = 0;
+```
+- 총 알파벳 수를 세기 위한 카운트 변수 선언 및 초기화
+
+```cpp
+	int alpha_cnt[26] = { 0, };
+```
+- 26개의 알파벳이 각각 몇번 등장하는지 개수를 저장할 배열 alpha_cnt 선언 및 초기화
+
+```cpp
+public:
+```
+- 멤버 함수에 대한 접근 지정자를 public으로 함 (외부 접근 가능)
+
+```cpp
+	Histogram(string s):str(s) {}
+```
+- s를 매개변수로 가지는 생성자 정의 (str 을 s로 초기화)
+
+```cpp
+	void add(string s) { str += s; }
+```
+- 문자열을 이어주는 함수 add 선언 및 정의 
+
+```cpp
+	void addc(char c) { str += c; }
+```
+- 문자를 문자열에 추가하는 함수 addc 선언 및 정의
+
+```cpp
+	void draw();
+```
+- 원문 텍스트와 히스토그램 모두 출력할 함수 draw 선언
+
+```cpp
+	void upper_to_lower();
+```
+- 대문자를 소문자로 변환하는 함수 upper_to_lower 선언
+
+```cpp
+void Histogram::upper_to_lower() {
+```
+- upper_to_lower 함수 정의
+
+```cpp
+	for (int i = 0; i < str.length(); i++) {
+```
+- 대문자를 소문자로 변환하기 위한 for문 (i가 0부터 문자열을 끝까지 1씩 증가하며 반복)
+
+```cpp
+		if ('A' <= str.at(i) && str.at(i) <= 'Z')
+```
+- str[i]가 대문자라면
+
+```cpp
+			str.at(i) += ('a' - 'A');
+```
+- str[i](현재 대문자)에 'a' - 'A'라는 일정한 값을 더해줌으로써 소문자로 변환 가능 (아스키코드 상에서 대문자보다 소문자가 더 크기 때문에 가능한 것)
+
+```cpp
+void Histogram::draw() {
+```
+- draw 함수 정의
+
+```cpp
+	cout << str << endl;
+```
+- 최종 문자열 출력
+
+```cpp
+	upper_to_lower();
+```
+- upper_to_lower 함수 호출 (str의 알파벳은 모두 소문자가 됨)
+
+```cpp
+	for (int i = 0; i < str.length(); i++) {
+```
+- 총 알파벳 수를 세기 위한 for문 (i가 0부터 문자열을 끝까지 1씩 증가하며 반복)
+
+```cpp
+		if ('a' <= str.at(i) && str.at(i) <= 'z') {
+```
+- str[i]가 소문자라면
+
+```cpp
+			cnt++;
+```
+- cnt를 1씩 증가시킴
+
+```cpp
+			alpha_cnt[str.at(i) - 'a']++;
+```
+- str[i]의 값에서 a의 값을 뺀 것을 인덱스로 삼아 alpha_cnt 배열에 알파벳을 카운팅해줌 (alpha_cnt[0='a'의 개수,1='b', ...25='z'])
+
+```cpp
+	cout << "\n총 알파벳 수 " << cnt << endl << endl;
+```
+- 총 알파벳 수 출력
+
+```cpp
+	for (int i = 0; i < 26; i++) {
+```
+- 히스토그램을 출력하기 위한  for문 (i가 0부터 25까지 1씩 증가하며 반복)
+
+```cpp
+		cout << char(i + 'a') << '(' << alpha_cnt[i] << ')' << " : ";
+```
+- a(7) : => 이런 형태로 출력 (i + 'a'는 0+'a' = 'a', 1+'a' = 'b', ... 이런 메커니즘임, 문자로 출력해야하니까 형변환 해준것)
+
+```cpp
+		for (int j = 0; j < alpha_cnt[i]; j++) {
+```
+- 히스토그램의 *을 출력하기 위한 for문 (j가 0부터 alpha_cnt[i]-1까지 1씩 증가하며 반복)
+
+```cpp
+			cout << '*';
+```
+- alpha_cnt에 저장된 각각의 알파벳 카운트 개수만큼 *을 출력
+
+```cpp
+		cout << endl;
+```
+- 줄바꿈 출력
+
+```cpp
+int main() {
+```
+- 메인함수 시작
+
+```cpp
+	Histogram histo("You fill up my senses, like a night in a forest\n");
+```
+- Histrogram 객체 histo 생성 (생성자 호출되어 위 영어문구로 초기화)
+
+```cpp
+	histo.add("Like the mountains in springtime, like a walk in the rain\n");
+```
+- add 함수를 호출하여 위 영어문구를 이어줌
+
+```cpp
+	histo.addc('-');
+```
+- addc 함수를 호출하여 위 문자를 붙여줌
+
+```cpp
+	histo.add("Annie's Song by John Denver");
+```
+- add 함수를 호출하여 위 영어문구를 이어줌
+
+```cpp
+	histo.draw();
+```
+- draw 함수를 호출하여 전체 결과 출력
+
+```cpp
+	return 0;
+```
+- 0을 반환하고 메인함수 정상 종료
+
+
+# 실행결과
+<img width="573" height="741" alt="image" src="https://github.com/user-attachments/assets/c089fd0f-a69b-47a6-8bc0-25ccd8531578" />
