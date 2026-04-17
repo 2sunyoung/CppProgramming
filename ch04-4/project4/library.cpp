@@ -23,7 +23,7 @@ class Library {
 public:
 	Library(string name, int size);
 	~Library();
-	void add(string name, int price);
+	void add(string title, int price);
 	void show();
 	Book* mostExpensive();
 };
