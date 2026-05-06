@@ -1,0 +1,18 @@
+// Title : 사전에서 뒤에 나오는 문자열 판별 프로그램 (값에 의한 호출)
+// Author : Lee sunyoung
+// Data : 26.5.6
+
+#include <iostream>
+#include <string>
+using namespace std;
+string GetLatterString(string s1, string s2);
+int main() {
+	string s1("hello");
+	string s2("world");
+	string res;
+	res = GetLatterString(s1, s2); // 함수 호출
+	cout << "사전에서 뒤에 나오는 문자열은 " << res << "입니다." << endl;
+}
+string GetLatterString(string s1, string s2) {
+	return (s1 > s2) ? s1 : s2;
+}
