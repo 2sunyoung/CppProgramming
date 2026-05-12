@@ -24,5 +24,7 @@ C++언어 함수의 반환과정을 상세히 설명하라
 
 ## 답
 설명은 주석으로 대신함<br>
-<img width="1281" height="745" alt="image" src="https://github.com/user-attachments/assets/cd74d321-bb41-4de0-bd8a-77a59e471215" />
+<img width="1281" height="745" alt="image" src="https://github.com/user-attachments/assets/cd74d321-bb41-4de0-bd8a-77a59e471215" /><br>
+<img width="588" height="153" alt="image" src="https://github.com/user-attachments/assets/bec44ef5-ba83-47e0-9d06-b30e66745306" /><br>
+
 
