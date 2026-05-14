@@ -2,7 +2,6 @@
 // Author : Lee sunyoung
 // Data : 26.5.14
 
-#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
 using namespace std;
@@ -19,7 +18,6 @@ Person::Person(int id, string name) {
 	this->name = name;
 }
 void Person::changeName(string name) {
-	if (name.length() > this->name.length()) return;
 	this->name = name;
 }
 int main() {
