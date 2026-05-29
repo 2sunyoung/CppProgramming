@@ -53,7 +53,7 @@ public:
 ```cpp
 	friend Complex ComplexAdd(Complex a, Complex b);
 ```
-- ComplexAdd 라는 외부 함수를 friend로 선하여 Complex 클래스 멤버 접근 권한을 줌
+- ComplexAdd 라는 외부 함수를 friend로 선언하여 Complex 클래스 멤버 접근 권한을 줌
 
 ```cpp
 void Complex::show() {
