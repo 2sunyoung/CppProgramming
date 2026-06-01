@@ -1,3 +1,7 @@
+// Title : + 연산자함수를 만들어 복소수를 계산하는 프로그램
+// Author : Lee sunyoung
+// Date : 26.6.1
+
 #include <iostream>
 using namespace std;
 class Complex {
