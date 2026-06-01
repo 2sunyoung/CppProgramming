@@ -7,7 +7,7 @@ using namespace std;
 class Complex {
 	int real, img;
 public:
-	Complex(int r, int i) : real(r), img(i) {}
+	Complex(int r = 0, int i = 0) : real(r), img(i) {}
 	void show();
 	Complex& operator+=(Complex op2);
 };
