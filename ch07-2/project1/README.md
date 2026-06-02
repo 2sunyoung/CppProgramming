@@ -83,7 +83,7 @@ Complex Complex::operator+ (Complex op2) {
 ```cpp
 int main() {
 ```
-- 메인함수 시
+- 메인함수 시작 
 
 ```cpp
 	Complex x(2, 3), y(-5, 10), sum;
